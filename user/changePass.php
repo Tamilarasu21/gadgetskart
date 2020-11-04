@@ -1,0 +1,40 @@
+<?php
+session_start();
+include_once "../config.php";
+if(isset($_POST['change']))
+{
+    $opassword=mysqli_real_escape_string($con,md5($_POST['opassword']));
+    $npassword=mysqli_real_escape_string($con,md5($_POST['npassword']));
+    $cnpassword=mysqli_real_escape_string($con,md5($_POST['cnpassword']));
+    $sql="select * from users where email='".$_SESSION['user']."'";
+    $run=mysqli_query($con,$sql);
+    while($row=mysqli_fetch_assoc($run))
+    {
+        $opass=$row['password'];
+    }
+    if($opass==$opassword)
+    {
+        if($npassword==$cnpassword)
+        {
+            $query="update users set password='".$cnpassword."' where email='".$_SESSION['user']."'";
+            $stmt=mysqli_query($con,$query);
+            if($stmt)
+            {
+                header("Location:changePassword.php?change=success");
+            }
+            else
+            {
+                header("Location:changePassword.php?change=error");
+            }
+        }
+        else
+        {
+            header("Location:changePassword.php?change=npnomatch");
+        }
+    }
+    else
+    {
+        header("Location:changePassword.php?change=opnomatch");
+    }
+}
+?>
