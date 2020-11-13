@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="assets/cart.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css" />
 </head>
 <body>
     <div class="header" style="background:#b2bcc2;">

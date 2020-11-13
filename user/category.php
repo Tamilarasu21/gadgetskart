@@ -31,8 +31,8 @@
     while($read=mysqli_fetch_assoc($run))
     {
         ?>
-        <div class="col-lg-4 text-center" style="border:1px solid gray;border-radius:4px;">
-        <a href="productCategory.php?category=<?php echo  $read['category'] ?>"><img class="img-circle" src="../assets/gadget123.png" alt="<?php echo  $read['category'] ?>" width="200" height="200">
+        <div class="col-lg-4 text-center" style="padding:10px;padding-top:15px;">
+        <a href="productCategory.php?category=<?php echo  $read['category'] ?>" style="text-decoration:none;color:gray;"><img class="img-fluid" src='../assets/category/<?php echo $read['category'] ?>.png' alt="<?php echo  $read['category'] ?>" width="130" height="130">
             <h2 class="text-warning"><?php echo  ucfirst($read['category']) ?></h2></a>
         </div>
     <?php

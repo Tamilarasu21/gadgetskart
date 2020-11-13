@@ -22,7 +22,7 @@
     }
     ?>
 <div class="main">
-    <legend><h1 class="text-success text-center">Brands</h1></legend>
+    <legend><h1 class="text-success text-center" style="font-weight:600;">Popular Brands</h1></legend>
     <div class="container">
         <div class="row" style="padding:5px;">
     <?php
@@ -31,9 +31,9 @@
     while($read=mysqli_fetch_assoc($run))
     {
         ?>
-        <div class="col-lg-4 text-center" style="border:1px solid gray;border-radius:4px;">
-        <a href="productBrands.php?brands=<?php echo  $read['brand'] ?>"><img class="img-fluid img-resoponsive" src="../assets/<?php echo  $read['brand'] ?>.png" alt="<?php echo  $read['brand'] ?>" width="200" height="200">
-            <h2 class="text-danger"><?php echo  ucfirst($read['brand']) ?></h2></a>
+        <div class="col-lg-4 text-center" style="padding:10px">
+        <a style="text-decoration:none" href="productBrands.php?brands=<?php echo  $read['brand'] ?>"><h2 class="text-danger"><img class="img-fluid" src="../assets/<?php echo  $read['brand'] ?>.png" alt="<?php echo  $read['brand'] ?>" width="150" height="150"><br>
+            <?php echo  ucfirst($read['brand']) ?></h2></a>
         </div>
     <?php
     }
