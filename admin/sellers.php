@@ -17,28 +17,8 @@
         {
             header("Location:index.php");
         }
+        include_once "header.php";
     ?>
-    <div class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-                <a href="#" class="navbar-brand">GadgetsKart&nbsp;<i class="fa fa-shopping-cart"></i></a>
-            </div>
-            <div id="menu" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="home.php">Home</a></li>
-                    <li class="active"><a href="sellers.php" >Sellers</a></li>
-                    <li><a href="users.php" >Users</a></li>
-                    <li><a href="sales.php">Sales</a></li>
-                    <li><a href="logout.php">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="main">
     <?php
         include "../config.php";
